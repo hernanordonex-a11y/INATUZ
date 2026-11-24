@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>INATUZ HOME LAB | Plataforma Oficial</title>
+  <style>
+    :root {
+      --arena: #EDE6DC; --olivo: #4A5444; --almendra: #FAF7F2; --ambar: #B85A34; --oscuro: #252822;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: var(--arena); color: var(--oscuro); font-family: 'Segoe UI', system-ui, sans-serif; line-height: 1.5; }
+    h1, h2, h3 { font-family: Georgia, 'Times New Roman', serif; }
+    header { background: var(--almendra); padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(74,84,68,0.2); position: sticky; top: 0; z-index: 10; flex-wrap: wrap; }
+    .logo { font-weight: 700; color: var(--olivo); letter-spacing: 2px; font-size: 1.2rem; }
+    .logo span { display: block; font-size: 0.65rem; color: var(--ambar); letter-spacing: 2.5px; }
+    nav a { text-decoration: none; color: var(--oscuro); margin-left: 1rem; font-size: 0.85rem; font-weight: 600; }
+    nav a:hover { color: var(--ambar); }
+    .hero { max-width: 1150px; margin: 0 auto; padding: 3.5rem 5%; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 2.5rem; align-items: center; }
+    .badge { background: var(--olivo); color: var(--almendra); padding: 0.35rem 1rem; border-radius: 20px; font-size: 0.75rem; display: inline-block; margin-bottom: 1rem; letter-spacing: 1px; text-transform: uppercase; }
+    .hero h1 { font-size: 2.7rem; color: var(--olivo); line-height: 1.12; margin-bottom: 1rem; }
+    .btn { background: var(--ambar); color: var(--almendra); padding: 0.85rem 1.6rem; border-radius: 6px; text-decoration: none; font-weight: 600; display: inline-block; margin-top: 1.2rem; }
+    section { max-width: 1150px; margin: 0 auto; padding: 3rem 5%; }
+    .sec-head { border-left: 4px solid var(--ambar); padding-left: 1rem; margin-bottom: 1.8rem; }
+    .sec-head h2 { font-size: 2rem; color: var(--olivo); }
+    .manifiesto { background: var(--olivo); color: var(--almendra); padding: 3rem 6%; border-radius: 14px; text-align: center; font-family: Georgia, serif; font-size: 1.55rem; font-style: italic; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.3rem; }
+    .card { background: var(--almendra); border-radius: 10px; overflow: hidden; border: 1px solid rgba(74,84,68,0.2); display: flex; flex-direction: column; }
+    .visual-banner { width: 100%; height: 150px; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #4A5444 0%, #687560 100%); color: var(--almendra); position: relative; }
+    .visual-banner.warm { background: linear-gradient(135deg, #B85A34 0%, #D47A55 100%); }
+    .visual-banner.sand { background: linear-gradient(135deg, #D9CFC1 0%, #EDE6DC 100%); color: var(--olivo); }
+    .body { padding: 1.3rem; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
+    .avatar-box { display: flex; align-items: center; gap: 0.85rem; margin-bottom: 0.7rem; }
+    .avatar-circle { width: 52px; height: 52px; border-radius: 50%; background: var(--olivo); color: var(--almendra); display: flex; align-items: center; justify-content: center; font-weight: 700; font-family: Georgia, serif; font-size: 1.1rem; border: 2px solid var(--ambar); flex-shrink: 0; }
+    .avatar-circle.ambar { background: var(--ambar); border-color: var(--olivo); }
+    .tag { font-size: 0.7rem; font-weight: 700; color: var(--ambar); text-transform: uppercase; letter-spacing: 0.8px; }
+    .card h3 { font-size: 1.35rem; color: var(--olivo); }
+    .sub { font-size: 0.8rem; font-weight: 600; color: #666; margin-bottom: 0.6rem; }
+    .quote { background: var(--arena); padding: 0.75rem; border-radius: 6px; font-style: italic; font-size: 0.83rem; margin: 0.7rem 0; border-left: 3px solid var(--ambar); }
+    .meta { display: flex; justify-content: space-between; font-size: 0.75rem; font-weight: 700; color: var(--ambar); border-top: 1px dashed #ccc; padding-top: 0.6rem; }
+    .kpi { font-size: 2rem; font-weight: 700; color: var(--ambar); margin: 0.3rem 0; }
+    footer { background: var(--olivo); color: var(--arena); text-align: center; padding: 2rem; margin-top: 2rem; font-size: 0.85rem; }
+    @media(max-width:768px){ .hero { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">INATUZ <span>HOME LAB · HOTZIY.STUDIO</span></div>
+  <nav>
+    <a href="#desarrollo">Desarrollo</a>
+    <a href="#participantes">5 Participantes</a>
+    <a href="#profesionistas">Profesionistas</a>
+    <a href="#aliados">Aliados</a>
+    <a href="#dashboard">Dashboard</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div>
+    <div class="badge">Incubación INATUZ 100 · Cohorte 01</div>
+    <h1>El laboratorio de lo íntimo: diseña tu espacio interior.</h1>
+    <p>Agencia de orientación psicoanalítica juvenil, transformación emocional e identidad. Rigor contable y calidez estética.</p>
+    <a href="#participantes" class="btn">Ver Cohorte Piloto →</a>
+  </div>
+  <div>
+    <!-- ILUSTRACIÓN VECTORIAL OFICIAL INATUZ (CAPAS Y ARQUITECTURA INTERIOR) -->
+    <svg viewBox="0 0 400 320" width="100%" style="border-radius:14px; border:6px solid #FAF7F2; box-shadow:0 10px 25px rgba(0,0,0,0.1);">
+      <rect width="400" height="320" fill="#4A5444"/>
+      <circle cx="200" cy="160" r="120" fill="none" stroke="#EDE6DC" stroke-width="1.5" opacity="0.4"/>
+      <circle cx="200" cy="160" r="85" fill="none" stroke="#EDE6DC" stroke-width="2" opacity="0.7"/>
+      <circle cx="200" cy="160" r="50" fill="#B85A34"/>
+      <path d="M120 260 Q200 180 280 260" fill="none" stroke="#FAF7F2" stroke-width="2.5"/>
+      <text x="200" y="165" text-anchor="middle" fill="#FAF7F2" font-family="Georgia, serif" font-size="14" letter-spacing="3">INNATUS</text>
+      <text x="200" y="295" text-anchor="middle" fill="#EDE6DC" font-family="sans-serif" font-size="10" letter-spacing="2">RAÍZ · ESTRUCTURA · VOZ PROPIA</text>
+    </svg>
+  </div>
+</div>
+
+<section>
+  <div class="manifiesto">
+    “No creemos en los consultorios clínicos fríos. Creemos en la calidez de un hogar inteligente, en la escucha psicoanalítica profunda y en la fuerza de los jóvenes cuando habitan su propia voz.”
+  </div>
+</section>
+
+<section id="desarrollo">
+  <div class="sec-head">
+    <h2>Mesa de Desarrollo & Gobernanza</h2>
+    <p>Equipo fundador (3 Contadoras Públicas + Dirección Creativa).</p>
+  </div>
+  <div class="grid">
+    <div class="card">
+      <div class="body">
+        <div class="avatar-box">
+          <div class="avatar-circle">CFO</div>
+          <div><span class="tag">Finanzas</span><h3>La Tesorera</h3></div>
+        </div>
+        <p>Audita el Fondo Monetario ($26.650.000 COP/cohorte) y blinda cada peso ante patrocinadores.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="body">
+        <div class="avatar-box">
+          <div class="avatar-circle">COO</div>
+          <div><span class="tag">Operaciones</span><h3>La Gobernante</h3></div>
+        </div>
+        <p>Vigila el cronograma de 100 días, certificados SENA, pólizas y protocolos de confidencialidad.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="body">
+        <div class="avatar-box">
+          <div class="avatar-circle">CRO</div>
+          <div><span class="tag">Alianzas B2B</span><h3>La Embajadora</h3></div>
+        </div>
+        <p>Gestiona becas corporativas B2B y convenios de Responsabilidad Social Empresarial.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="body">
+        <div class="avatar-box">
+          <div class="avatar-circle ambar">HO</div>
+          <div><span class="tag">CCO · Diseño</span><h3>Hernán Ordóñez</h3></div>
+        </div>
+        <p>El Curador: dirige la web <strong>hotziy.studio</strong>, los Manifiestos de Vida y la pasarela final.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="participantes">
+  <div class="sec-head">
+    <h2>Los 5 Jóvenes Participantes · Cohorte 01</h2>
+    <p>Becarios (18-23 años) en proceso de orientación psicoanalítica, hábitos y proyección.</p>
+  </div>
+  <div class="grid">
+    <div class="card">
+      <div class="visual-banner">
+        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#FAF7F2" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M5 20c1.5-4 12.5-4 14 0"/></svg>
+      </div>
+      <div class="body">
+        <div>
+          <span class="tag">#INZ-01 · 20 años</span>
+          <h3>Mateo Valencia</h3>
+          <div class="sub">Liderazgo y autonomía</div>
+          <div class="quote">“Dejé de cargar expectativas ajenas para construir mi propia voz.”</div>
+        </div>
+        <div class="meta"><span>Fase 2: Oratoria</span><span>68%</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="visual-banner warm">
+        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#FAF7F2" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M5 20c1.5-4 12.5-4 14 0"/></svg>
+      </div>
+      <div class="body">
+        <div>
+          <span class="tag">#INZ-02 · 19 años</span>
+          <h3>Valeria Mendoza</h3>
+          <div class="sub">Identidad creativa</div>
+          <div class="quote">“Ordenar mi espacio interior me dio seguridad en escena.”</div>
+        </div>
+        <div class="meta"><span>Fase 2: Hábitos</span><span>64%</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="visual-banner">
+        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#FAF7F2" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M5 20c1.5-4 12.5-4 14 0"/></svg>
+      </div>
+      <div class="body">
+        <div>
+          <span class="tag">#INZ-03 · 22 años</span>
+          <h3>Santiago Ríos</h3>
+          <div class="sub">Proyecto de vida</div>
+          <div class="quote">“El psicoanálisis transformó mis bloqueos en metas reales.”</div>
+        </div>
+        <div class="meta"><span>Fase 2: Psicoanálisis</span><span>62%</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="visual-banner warm">
+        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#FAF7F2" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M5 20c1.5-4 12.5-4 14 0"/></svg>
+      </div>
+      <div class="body">
+        <div>
+          <span class="tag">#INZ-04 · 18 años</span>
+          <h3>Camila Orozco</h3>
+          <div class="sub">Presencia y expresión</div>
+          <div class="quote">“La vulnerabilidad acompañada se vuelve fuerza escénica.”</div>
+        </div>
+        <div class="meta"><span>Fase 2: Pasarela</span><span>70%</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="visual-banner">
+        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#FAF7F2" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M5 20c1.5-4 12.5-4 14 0"/></svg>
+      </div>
+      <div class="body">
+        <div>
+          <span class="tag">#INZ-05 · 21 años</span>
+          <h3>Julián Caicedo</h3>
+          <div class="sub">Disciplina y oratoria</div>
+          <div class="quote">“100 días donde cuerpo y palabra se alinearon.”</div>
+        </div>
+        <div class="meta"><span>Fase 2: SENA</span><span>65%</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="profesionistas">
+  <div class="sec-head">
+    <h2>Red de Profesionistas</h2>
+    <p>Especialistas vinculados por cohorte ($3.230.000 COP directos por joven).</p>
+  </div>
+  <div class="grid">
+    <div class="card">
+      <div class="body">
+        <div class="avatar-box">
+          <div class="avatar-circle ambar">AR</div>
+          <div><span class="tag">6 Sesiones</span><h3>Dr. Alejandro Restrepo</h3></div>
+        </div>
+        <div class="sub">Psicoanalista</div>
+        <p>Escucha analítica quincenal para explorar el deseo propio e identidad del joven.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="body">
+        <div class="avatar-box">
+          <div class="avatar-circle">MS</div>
+          <div><span class="tag">3 Sesiones + Test</span><h3>Dra. Mariana Salazar</h3></div>
+        </div>
+        <div class="sub">Psicóloga Clínica</div>
+        <p>Batería psicométrica inicial y soporte conductual mensual.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="body">
+        <div class="avatar-box">
+          <div class="avatar-circle">GP</div>
+          <div><span class="tag">4 Sesiones</span><h3>Dr. Giraldo & Soc. Peña</h3></div>
+        </div>
+        <div class="sub">Psiquiatra y Socióloga</div>
+        <p>Valoración médica preventiva y lectura del contexto familiar.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="body">
+        <div class="avatar-box">
+          <div class="avatar-circle ambar">EC</div>
+          <div><span class="tag">16 Horas</span><h3>Prof. Esteban Córdoba</h3></div>
+        </div>
+        <div class="sub">Mentor de Retórica</div>
+        <p>Oratoria persuasiva y redacción del Manifiesto de Vida.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="body">
+        <div class="avatar-box">
+          <div class="avatar-circle">SA</div>
+          <div><span class="tag">3 Sesiones</span><h3>Sofía Aristizábal</h3></div>
+        </div>
+        <div class="sub">Mentora de Imagen</div>
+        <p>Curaduría estética, estilismo y proyección profesional.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="aliados">
+  <div class="sec-head">
+    <h2>Aliados Estratégicos</h2>
+    <p>Infraestructura operativa externa.</p>
+  </div>
+  <div class="grid">
+    <div class="card">
+      <div class="visual-banner sand"><strong>SENA / ETDH</strong></div>
+      <div class="body"><h3>Formación Técnica</h3><p>2 cursos técnicos virtuales certificados ($0 COP).</p></div>
+    </div>
+    <div class="card">
+      <div class="visual-banner sand"><strong>REGUS OFFICE</strong></div>
+      <div class="body"><h3>Respaldo Corporativo</h3><p>Domicilio comercial y salas ejecutivas B2B.</p></div>
+    </div>
+    <div class="card">
+      <div class="visual-banner sand"><strong>GYM PARTNER</strong></div>
+      <div class="body"><h3>Disciplina Física</h3><p>3 meses de entrenamiento físico y hábitos.</p></div>
+    </div>
+    <div class="card">
+      <div class="visual-banner sand"><strong>RUNWAY AGENCY</strong></div>
+      <div class="body"><h3>Agencia de Modelaje</h3><p>Postura escénica y sede de la Pasarela Final.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="dashboard">
+  <div class="sec-head">
+    <h2>Dashboard de Trazabilidad B2B</h2>
+    <p>Métricas en tiempo real en <strong>hotziy.studio</strong>.</p>
+  </div>
+  <div class="grid">
+    <div class="card"><div class="body"><span class="tag">Costo Real Becado</span><div class="kpi">$5.330.000</div><p>Incluye especialistas, operación fija y pasarela.</p></div></div>
+    <div class="card"><div class="body"><span class="tag">Ciclo 100 Días</span><div class="kpi">Día 65 / 100</div><p>Fase 2 activa: Psicoanálisis, SENA y Oratoria.</p></div></div>
+    <div class="card"><div class="body"><span class="tag">Manifiestos</span><div class="kpi">5 / 5 Listos</div><p>En fase final de diseño editorial.</p></div></div>
+  </div>
+</section>
+
+<footer>
+  <strong>INATUZ HOME LAB</strong> · Plataforma soportada por <strong>hotziy.studio</strong> © 2026
+</footer>
+
+</body>
+</html>
